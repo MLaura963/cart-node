@@ -12,8 +12,12 @@ async function calculateTotal(userCart){
 };
  
 //deletar item
-async function deleteItem(userCart, item){
+async function deleteItem(userCart, name){
+   const index = userCart.findIndex((item) => item.name === name);
 
+   if(index ===! -1){
+    userCart.splice(index,1);
+   } 
 };
 
 //remover item
