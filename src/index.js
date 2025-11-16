@@ -7,8 +7,8 @@ const cart = [];
 const wishList = [];
 
 //cria itens
-const item1 = await createItem("teclado", 100.90, 1);
-const item2 = await createItem("monitor", 890.5, 2);
+const item1 = await createItem("teclado", 100.90,"periférico", 1);
+const item2 = await createItem("monitor", 890.5,"periférico", 2);
 
 //Adiciona itens
 await cartService.addItem(cart, item1);

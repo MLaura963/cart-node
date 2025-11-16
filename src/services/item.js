@@ -2,10 +2,11 @@
 
 //criar item
 
-async function createItem(name, price, quantity){
+async function createItem(name, price, type, quantity){
     return{
         name,
         price,
+        type,
         quantity,
         subtotal: () => price * quantity,
     };

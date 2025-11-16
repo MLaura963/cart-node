@@ -48,11 +48,30 @@ async function displayCart(userCart){
     });
 }
 
+
+//filtrar itens
+async function filterItem(userCart, type) {
+    const filtered = userCart.filter((item) => item.type === type);
+
+    if (filtered.length === 0) {
+        console.log(`Nenhum item do tipo '${type}' encontrado.`);
+        return [];
+    }
+
+    console.log(`Itens do tipo '${type}':`);
+    filtered.forEach((item) => {
+        console.log(`- ${item.name} | R$ ${item.price} | qtd: ${item.quantity}`);
+    });
+
+    return filtered;
+}
+
 export{
     addItem,
     calculateTotal,
     deleteItem,
     removeItem,
-    displayCart
+    displayCart,
+    filterItem
 };
 
